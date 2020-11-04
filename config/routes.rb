@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
+  resources :products
   resources :product_images
   resources :images
   resources :product_features
   resources :features
-  resources :products
   resources :categories
   resources :product_categories
   resources :values

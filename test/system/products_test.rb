@@ -16,6 +16,7 @@ class ProductsTest < ApplicationSystemTestCase
 
     check "Availability" if @product.availability
     fill_in "Description", with: @product.description
+    fill_in "External", with: @product.external_id
     fill_in "Price", with: @product.price
     fill_in "Title", with: @product.title
     fill_in "Vendor code", with: @product.vendor_code
@@ -31,6 +32,7 @@ class ProductsTest < ApplicationSystemTestCase
 
     check "Availability" if @product.availability
     fill_in "Description", with: @product.description
+    fill_in "External", with: @product.external_id
     fill_in "Price", with: @product.price
     fill_in "Title", with: @product.title
     fill_in "Vendor code", with: @product.vendor_code
