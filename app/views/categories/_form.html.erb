@@ -12,23 +12,13 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :id %>
-    <%= form.text_field :id %>
-  </div>
-
-  <div class="field">
     <%= form.label :name %>
     <%= form.text_field :name %>
   </div>
 
   <div class="field">
     <%= form.label :parent_id %>
-    <%= form.text_field :parent_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :parent %>
-    <%= form.text_field :parent %>
+    <%= form.number_field :parent_id %>
   </div>
 
   <div class="actions">
