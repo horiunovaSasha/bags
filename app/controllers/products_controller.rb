@@ -1,9 +1,12 @@
+require "./lib/csv_module.rb"
+
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-
+  include CsvModule
   # GET /products
   # GET /products.json
   def index
+    load_products()
     @products = Product.all
   end
 
