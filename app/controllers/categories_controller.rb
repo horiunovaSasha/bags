@@ -7,7 +7,7 @@ class CategoriesController < ApplicationController
   # GET /categories
   # GET /categories.json
   def index
-    read_csv()
+    load_categories()
     @categories = Category.all
   end
 
