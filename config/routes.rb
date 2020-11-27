@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'products#index'
+  root to: 'images#index'
   resources :products
   resources :product_images
   resources :images
