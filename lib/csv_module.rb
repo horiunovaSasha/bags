@@ -1,8 +1,8 @@
 require 'csv'
 
 module CsvModule
-    CATEGORY_PATH = "/Users/okoshman/projects/ruby/rails/bags/lib/categories.csv"
-    PRODUCT_PATH = "/Users/okoshman/projects/ruby/rails/bags/lib/products_full_info.csv"
+    CATEGORY_PATH = "./lib/categories.csv"
+    PRODUCT_PATH = "./lib/products_full_info.csv"
 
     def load_categories
         table = CSV.parse(File.read(CATEGORY_PATH), headers: true)
