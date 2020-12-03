@@ -1,13 +1,13 @@
 require "./lib/csv_module.rb"
 
 class CategoriesController < ApplicationController
-  include CsvModule
+  #include CsvModule
   before_action :set_category, only: [:show, :edit, :update, :destroy]
 
   # GET /categories
   # GET /categories.json
   def index
-    load_categories()
+   # load_categories()
     @categories = Category.all
   end
 
