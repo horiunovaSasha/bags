@@ -7,7 +7,7 @@ namespace :my_namespace do
   desc "TODO"
   task csv_saver: :environment do
     load_products()
-    load_categories()
+    #load_categories()
   end
 
   desc "Bot"
