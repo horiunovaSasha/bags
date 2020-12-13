@@ -33,7 +33,7 @@ module TelegramBotModule
 		    Telegram::Bot::Types::InlineKeyboardButton.new(text: 'Go to the website', url: "https://fancy-bags.herokuapp.com/products/#{item.id}")
 		]
 		markup = Telegram::Bot::Types::InlineKeyboardMarkup.new(inline_keyboard: kb)
-		bot.api.sendPhoto(chat_id: message.from.id, caption: "#{item.title}\n\r#{item.description}", photo: item.product_images.first.image.path, reply_markup: markup)
+		bot.api.sendPhoto(chat_id: message.from.id, caption: "#{item.title}\n\r#{item.description}\n\rPrice:#{item.price} ₴", photo: item.product_images.first.image.path, reply_markup: markup)
 		
 	    end
 
