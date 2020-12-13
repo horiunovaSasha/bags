@@ -17,7 +17,7 @@ module CsvModule
             product_id = Product.find_or_create_by(:id => item["Id"], 
                 :title => item["Title"], 
                 :description => item["Description"], 
-                :price => item["price"], 
+                :price => item["Price"], 
                 :vendor_code => item["Vendor Code"],
                 :availability => item["Availability"]).id
             load_product_images(product_id, item["Images"])
