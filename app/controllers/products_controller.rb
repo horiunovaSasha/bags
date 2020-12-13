@@ -67,11 +67,11 @@ class ProductsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_product
-      @product = Product.find(params[:id])
+      @product = Product.joins(product_images: :image).find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
     def product_params
-      params.require(:product).permit(:title, :description, :price, :availability, :vendor_code, :external_id)
+      params.require(:product).permit(:title, :description, :price, :product_images)
     end
 end
